@@ -35,6 +35,7 @@
                             <span style="color: white; font-weight: bold;">
                                 <?php echo htmlspecialchars($network[$item]['title']); ?>
                             </span>
+                            <br/>
                             <span style="color: white; font-weight: bold;">
                                 <?php echo htmlspecialchars($network[$item]['subtitle']); ?>
                             </span>
