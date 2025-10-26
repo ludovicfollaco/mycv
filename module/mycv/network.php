@@ -28,17 +28,25 @@
                     <div class="container d-flex flex-column border rounded-3 m-0 p-0">
 
                         <!-- Start insert image right -->
-                        <div class="d-flex" 
-                            style="background: <?php echo htmlspecialchars($network[$item]['background_title']); ?>;
-                                    justify-content: center; 
-                                    align-items: center;">
-                            <span style="color: white; font-weight: bold;">
+                        <div class="d-flex flex-column justify-content-center align-items-center text-center p-3 mb-1"
+                            style="background: <?php echo htmlspecialchars($network[$item]['background_title']); ?>;">
+                            <h2 class="text-white text-center">
+                                <?php echo htmlspecialchars($network[$item]['newspaper']); ?>
+                            </h2>
+                            <span class="text-white text-center">
+                                <?php echo htmlspecialchars($network[$item]['editor']) . ' - le ' . htmlspecialchars($network[$item]['date']); ?>
+                            </span>
+                        </div>
+
+                        <!-- Start insert image right -->
+                        <div class="d-flex flex-column justify-content-center align-items-center text-center p-3"
+                            style="background:  #959cb1ff;">
+                            <h2 class="fw-bold text-white text-center">
                                 <?php echo htmlspecialchars($network[$item]['title']); ?>
-                            </span>
-                            <br/>
-                            <span style="color: white; font-weight: bold;">
+                            </h2>
+                            <h3 class="text-white text-center">
                                 <?php echo htmlspecialchars($network[$item]['subtitle']); ?>
-                            </span>
+                            </h3>
                         </div>
 
                         <div class="d-flex flex-column flex-lg-row justify-content-between align-items-start">
@@ -49,25 +57,30 @@
 
                             </div>
 
-                            <div class="d-flex justify-content-center align-items-center m-auto p-3">
-
+                            <div class="d-flex flex-column justify-content-center align-items-center m-auto p-3">
+                                <span class="d-block text-center p-0 m-0">
+                                    Cliquez sur l'image pour ouvrir la galerie
+                                </span>
                                 <?php
-
                                     if ($network[$item]['media_yesOrNo'] === "yes"){
                                         $pageID = Utilities::checkPage("page", "network");
                                         $sectionId = (int)Utilities::escapeInput($network[$item]['id']);
                                         slideFancyBox($pageID, $sectionId, $medias);
                                     }
                                 ?>
-
                             </div>
                                 
                         </div>
 
+                        <a href="<?php echo htmlspecialchars($network[$item]['urlArticle']); ?>" class="btn btn-primary" target="_blank"><?php echo 'Voir l\'article complet sur ' . htmlspecialchars($network[$item]['newspaper']); ?></a>
+
+                <!-- Insert network settings right -->
+
                     </div>
 
                 </div>
-                <!-- Insert network settings right -->
+
+                
                 <?php //mycvNetworkSettings($network, $i) ?>
 
             </form>
