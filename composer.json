@@ -1,0 +1,61 @@
+{
+  "name": "vendor/mycv",
+  "description": "Mon site de présentation",
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist"
+  },
+
+  "archive": {
+    "exclude": [
+      "/Dossier_Technique",
+      "/xdebug"
+    ]
+  },
+
+  "scripts": {
+    "post-install-cmd": [
+      "@php artisan optimize",
+      "composer dump-autoload --optimize"
+    ]
+  },
+
+  "require": {
+      "firebase/php-jwt": "^6.10",
+      "monolog/monolog": "^2.0",
+    "phpmailer/phpmailer": "^6.9"
+  },
+
+  "require-dev": {
+    "phpunit/phpunit": "^11.4"
+  },
+
+  "autoload": {
+    "psr-4": {
+        "Model\\Comment\\": "model/common/",
+        "Model\\DbConnect\\": "model/common/",
+        "Model\\Page\\": "model/common/",
+        "Model\\Subscription\\": "model/common/",
+        "Model\\Type\\": "model/common/",
+        "Model\\User\\": "model/common/",
+        "Model\\UserForm\\": "model/common/",
+        "Model\\Utilities\\": "model/common/",
+
+        "Model\\Car\\": "model/garageparrot/",
+        "Model\\CarBrand\\": "model/garageparrot/",
+        "Model\\CarForm\\": "model/garageparrot/",
+        "Model\\GpHome\\": "model/garageparrot/",
+        "Model\\CarModel\\": "model/garageparrot/",
+        "Model\\CarEngine\\": "model/garageparrot/",
+        "Model\\GpSchedules\\": "model/garageparrot/",
+
+        "Model\\GoldorakHome\\": "model/goldorak/",
+
+        "Model\\Article\\": "model/mycv/",
+        "Model\\Home\\": "model/mycv/",
+        "Model\\Experience\\": "model/mycv/",
+        "Model\\Network\\": "model/mycv/",
+        "Model\\Media\\": "model/mycv/"
+    }
+  }
+}

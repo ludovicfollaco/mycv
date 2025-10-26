@@ -1,0 +1,37 @@
+.nav-item{
+    border-left: 1px solid #cacaca;
+}
+
+.nav-link{
+    margin-right: 3px;
+    padding: 3px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item:hover{
+    background-color: #d4d4d4;
+}
+
+.nav-link_{
+    background-color: #f8f9fa;
+    color: #0d6efd;
+}
+
+.Nav_Span1{
+    color:#343a40;
+    font-size: 1.6rem;
+}
+
+.Nav_Span2{
+    color:#0d6efd;
+    font-size: 1.4rem;
+}
+
+@media (max-width: 767px) {
+    .custom-border-md-bottom {
+        border-bottom: 1px solid #cacaca;
+        border-left: 0px;
+    }
+}

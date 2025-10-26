@@ -1,0 +1,21 @@
+.rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating i {
+  font-size: 24px;
+  color: #d7d7d7;/* #ffd700;*/ /* Couleur jaune pour les étoiles */
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.rating i:hover,
+.rating i.active {
+  color: #ffcc00; /* Couleur jaune clair au survol */
+}
+
+#star_{
+  color: #ffcc00;
+}

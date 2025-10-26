@@ -1,0 +1,143 @@
+.bgDark{
+  background-color: #343a40;
+}
+
+html{
+  font-family: verdana, arial, sans-serif;
+  font-size: 62.5%;  /*62.5% = 10px = 1 rem donc 12px = 1.2rem, 14px = 1.4rem, 16px = 1.6rem etc...*/
+}
+
+body, p, h5, h6, .btn,
+.accordion-button,
+.form-select, .form-text{
+  font-size: 1.6rem;
+}
+
+h1{
+  font-size: 3.2rem;
+}
+
+h2, legend{
+  font-size: 2.4rem;
+}
+
+h3{
+  font-size: 1.8rem;
+}
+
+h4{
+  font-size: 1.7rem;
+}
+
+input, textarea{
+  border: none;
+  width: 100%;
+  font-size: 1.6rem;  
+}
+
+/* Manage color star*/
+.rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating i {
+  font-size: 24px;
+  color: #d7d7d7;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.rating i:hover,
+.rating i.active {
+  color: #ffcc00;
+}
+
+article{
+  background-color: #343a40;
+  color: white;
+  text-align: justify;
+}
+
+aside{
+  background-color: #343a40;
+  color: white;
+  text-align: justify;
+}
+
+/* Style tableau */
+.tdLineAdd{
+  width: 30px;
+  min-width: 15px;
+  max-width: 35px;
+  resize: vertical;
+  background-color:lightgrey;
+}
+
+.tdLine{
+  width: 30px;
+  min-width: 15px;
+  max-width: 35px;
+  resize: vertical;
+  background-color:lightgrey;
+}
+
+.tdUpdate, .tdDelete{
+  text-align: center;
+}
+
+.tdLabel{
+  width: 65px;
+}
+
+.tdText{
+  width: 250px;
+}
+
+/* Style boutons et icônes boutons */
+.btUpdate, .btDelete{
+  width: 30px;
+  height: 30px;
+  border: 1PX solid white;
+}
+
+.iconeUpdate, .iconeDelete{
+  width: 100%;
+}
+
+/* Style page user */
+.section__user{
+  width: 100%;
+}
+
+[class*="txt__user"]{
+    white-space: nowrap;
+    background-color: #343a40;
+    color: white;
+}
+
+/* Input */
+input[type="text"][class*="user"],
+input[type="email"][class*="user"],
+input[type="tel"][class*="user"]{
+  background-color: #343a40;
+  color: white;
+  font-size: 1.6rem;
+  border: none;
+}
+
+input[type="tel"][class*="user"], input[type="email"][class*="user"] {
+  border: none;
+}
+
+input[type="text"][class*="label"] {
+  outline: none;
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 767px) {
+  main{
+    flex-direction: column;
+  }
+}

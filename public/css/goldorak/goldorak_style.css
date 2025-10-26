@@ -1,0 +1,72 @@
+html{
+  font-family:Verdana, Tahoma, sans-serif;
+  font-size: 62.5%;  /*62.5% = 10px = 1 rem donc 12px = 1.2rem, 14px = 1.4rem, 16px = 1.6rem etc...*/
+}
+
+body, p, h5, h6, .btn,
+.accordion-button,
+.form-select, .form-text{
+  font-size: 1.6rem;
+}
+
+h1{
+  font-size: 3.2rem;
+}
+
+h2, legend{
+  font-size: 2.4rem;
+}
+
+h3{
+  font-size: 1.8rem;
+}
+
+h4{
+  font-size: 1.7rem;
+}
+
+main{
+  background-image: url('../../img/goldorak/background/background_dark.webp');
+  background-size: cover;
+  background-position: center;
+}
+
+header{
+  background-image: url('../../img/goldorak/banner/img_goldorak_dark_02.webp');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+input, textarea{
+  border: none;
+  width: 100%;
+  font-size: 1.6rem;  
+}
+
+/*-----------------------------------------------------------------------*/
+/*--------PARAMETRES ECRANS SUPERIEURs A 460px---------------------------*/
+/*-----------------------------------------------------------------------*/
+  
+@media screen and (min-width: 460px){
+
+  .my_iframe{
+    width:450px;
+    height:250px;
+    padding: 0 0 10px 0;
+    margin: 0;
+  }
+}
+  
+/*-----------------------------------------------------------------------*/
+/*--------PARAMETRES ECRANS INFERIEURS A 465px---------------------------*/
+/*-----------------------------------------------------------------------*/
+
+@media screen and (max-width: 465px) {
+  .my_iframe {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    margin: 0;
+  }
+}
